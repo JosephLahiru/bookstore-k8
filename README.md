@@ -15,3 +15,13 @@ kubectl get statefulsets
 cd kubernetes/mongo
 kubectl apply -f service.yaml
 kubectl get svc
+
+## Start Flask App Services
+
+cd kubernetes/flask-app
+kubectl apply -f deployment.yaml
+kubectl get deployments
+
+cd kubernetes/flask-app
+kubectl apply -f service.yaml
+kubectl get svc
