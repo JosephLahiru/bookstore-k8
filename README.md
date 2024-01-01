@@ -1,8 +1,8 @@
 # Restaurant Customer Satisfaction Survey.
 
-## Install Python dependencies
+## Create the Docker Image
 
-```pip install -r python/requirements.txt```
+```docker build -t flask-app .```
 
 ## Install and Start Minikube
 
