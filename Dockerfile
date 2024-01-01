@@ -1,6 +1,6 @@
 FROM python:3.7
 WORKDIR /app
 COPY . /app
-RUN pip install -r requirements.txt
+RUN pip install -r python/requirements.txt
 EXPOSE 5000
-CMD ["python", "app.py"]
+CMD ["python", "python/app.py"]
