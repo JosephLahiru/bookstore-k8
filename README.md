@@ -1,4 +1,4 @@
-# Restaurant Customer Satisfaction Survey.
+# BOOKSTORE
 
 ## Create the Docker Image
 
@@ -32,8 +32,8 @@
 
 ```kubectl get svc flask-app```<br/><br/>
 
-- if it is still pending wait for a bit until your cloud provider assigs an external-ip
+- if it is still pending wait for a bit until your cloud provider assigns an external-IP
 
-## Using postman you can test the newly created flask API
+## Using Postman you can test the newly created Flask API
 
 ```http://{EXTERNAL-IP}:5000/books```
