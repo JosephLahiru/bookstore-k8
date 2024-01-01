@@ -12,18 +12,28 @@
 
 ## Start Database Services
 
-```cd kubernetes/mongo```
-```kubectl apply -f statefulset.yaml```
-```kubectl get statefulsets```
+```cd kubernetes/mongo```<br/>
+```kubectl apply -f statefulset.yaml```<br/>
+```kubectl get statefulsets```<br/><br/>
 
-```kubectl apply -f service.yaml```
-```kubectl get svc```
+```kubectl apply -f service.yaml```<br/>
+```kubectl get svc```<br/>
 
 ## Start Flask App Services
 
-```cd kubernetes/flask-app```
-```kubectl apply -f deployment.yaml```
-```kubectl get deployments```
+```cd kubernetes/flask-app```<br/>
+```kubectl apply -f deployment.yaml```<br/>
+```kubectl get deployments```<br/><br/>
 
-```kubectl apply -f service.yaml```
-```kubectl get svc```
+```kubectl apply -f service.yaml```<br/>
+```kubectl get svc```<br/>
+
+## Check for the External-IP for the created flask-app service
+
+```kubectl get svc flask-app```<br/><br/>
+
+- if it is still pending wait for a bit until your cloud provider assigs an external-ip
+
+## Using postman you can test the newly created flask API
+
+```http://{EXTERNAL-IP}:5000/books```
