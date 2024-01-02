@@ -13,19 +13,20 @@
 ## Start Database Services
 
 ```cd kubernetes/mongo```<br/>
-```kubectl apply -f statefulset.yaml```<br/>
+```kubectl apply -f mongo-statefulset.yaml```<br/>
 ```kubectl get statefulsets```<br/><br/>
 
-```kubectl apply -f service.yaml```<br/>
+```kubectl apply -f mongo-service.yaml```<br/>
 ```kubectl get svc```<br/>
 
 ## Start Flask App Services
 
-```cd kubernetes/flask-app```<br/>
-```kubectl apply -f deployment.yaml```<br/>
+```cd ..```
+```cd flask-app```<br/>
+```kubectl apply -f app-deployment.yaml```<br/>
 ```kubectl get deployments```<br/><br/>
 
-```kubectl apply -f service.yaml```<br/>
+```kubectl apply -f app-service.yaml```<br/>
 ```kubectl get svc```<br/>
 
 ## Check for the External-IP for the created flask-app service
